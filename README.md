@@ -14,3 +14,20 @@
    ```bash
    git clone https://github.com/<your-username>/inno-insight-web-scrapers.git
    cd inno-insight-web-scrapers
+
+2. **Set up a Virtual Environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
+Usage
+Running a Scraper
+Each scraper is located in the scrapers/ directory. Example for running the news scraper:
+```bash
+python scrapers/news_scraper.py
+
+
