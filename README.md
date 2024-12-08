@@ -24,8 +24,8 @@
    ```bash
    pip install -r requirements.txt
 
-Usage
-Running a Scraper
+## Usage
+**Running a Scraper**:
 Each scraper is located in the scrapers/ directory. Example for running the news scraper:
 ```bash
 python scrapers/news_scraper.py
