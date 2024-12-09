@@ -1,33 +1,39 @@
-# Inno Insight Web Scrapers  
+# Inno Insight Web Scrapers (Node.js Version)
 
-**Inno Insight Web Scrapers** is a Python-based repository for scraping unstructured textual data from various web sources. This data will be used to analyze the innovation landscape in Australia, focusing on insights like government funding for startups, inefficiencies in innovation practices, and trends in innovation.  
+**Inno Insight Web Scrapers** is a Node.js-based server designed to scrape unstructured textual data from various web sources. The data collected will be used to analyze the innovation landscape in Australia, with a focus on insights like government funding for startups, inefficiencies in innovation practices, and trends in innovation.
 
-## Features  
-- Scrape news articles, forums, reviews, social media posts, and more.  
-- Collect metadata such as author, publication date, source, and topics.  
-- Flexible configuration for new data sources.  
-- Automated logging for monitoring scraper performance.  
+## Features
 
-## Installation  
+- Scrapes news articles, blogs, reviews, and other content from various web pages.
+- Extracts metadata such as author, publication date, title, and content.
+- Generates XML files from the scraped content.
+- Automatically saves the generated XML files in a `datasets` folder.
+- Provides a RESTful API for triggering scraping operations via URL submission.
+- Ensures the `datasets` folder exists before saving files.
 
-1. **Clone the Repository**:  
+## Requirements
+
+- Node.js (version 14.x or later)
+- npm or yarn (package manager)
+
+## Installation
+
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/<your-username>/inno-insight-web-scrapers.git
-   cd inno-insight-web-scrapers
-
-2. **Set up a Virtual Environment**:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-3. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/<your-username>/inno-insight-web-scrapers-node.git
+   cd inno-insight-web-scrapers-node
+2. **Install Dependencies: Run the following command to install all necessary dependencies**:
+   npm install
+3. **Start the Server: To start the server, use**:
+   npm start
 
 ## Usage
-**Running a Scraper**:
-Each scraper is located in the scrapers/ directory. Example for running the news scraper:
-```bash
-python scrapers/news_scraper.py
+**API Endpoint**
+   The server exposes a POST API endpoint for scraping content from a URL.
 
-
+   Endpoint: /scrape
+   Method: POST
+   Request Body:
+      {
+         "url": "https://example.com/article"
+      }
