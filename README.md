@@ -28,12 +28,12 @@
    npm start
 
 ## Usage
-**API Endpoint**
+   **API Endpoint**:
    The server exposes a POST API endpoint for scraping content from a URL.
 
-   Endpoint: /scrape
-   Method: POST
-   Request Body:
+   - **Endpoint**: /scrape
+   - **Method**: POST
+   - **Request Body**:
       {
          "url": "https://example.com/article"
       }
